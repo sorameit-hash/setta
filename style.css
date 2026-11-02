@@ -1,0 +1,316 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6%;
+  background-color: #fff;
+}
+
+header h1 {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* メインビジュアル */
+.main-visual {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.main-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 写真の上の文字 */
+.main-text {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 1 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+.main-text h2 {
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 4px;
+}
+
+.main-text p {
+  margin-top: 25px;
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: clamp(12px, 1.4vw, 20px);
+  letter-spacing: 2px;
+}
+
+/* CONCEPT */
+.concept {
+  background-color: #f4f0e8;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.section-title {
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.concept h2 {
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 35px;
+}
+
+.concept-text {
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: 20px;
+  line-height: 2.5;
+}
+
+/* COLLECTION */
+.collection {
+  background-color: #f5f5f3;
+  text-align: center;
+  padding: 90px 6%;
+}
+
+.collection h2 {
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.collection-lead {
+  margin-top: 18px;
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: 16px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 55px auto 45px;
+  max-width: 1100px;
+}
+
+.product {
+  flex: 1;
+  min-width: 0;
+}
+
+.product img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.product h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.product p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.view-more {
+  display: inline-block;
+  padding: 14px 55px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* フッター */
+footer {
+  background-color: #203c32;
+  color: white;
+  text-align: center;
+  padding: 45px 20px 25px;
+}
+
+footer h2 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+footer nav {
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 45px;
+}
+
+footer nav a {
+  color: white;
+}
+
+.copyright {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+/* メインビジュアル左側を少し暗くする */
+.main-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0) 45%
+  );
+  pointer-events: none;
+}
+
+.main-text {
+  z-index: 1;
+}
+
+/* スマートフォン用 */
+@media screen and (max-width: 768px) {
+
+  /* ヘッダー */
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 12px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header nav {
+    gap: 18px;
+  }
+
+  header nav a {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  /* メインビジュアル */
+  .main-visual img {
+    height: 520px;
+    object-fit: cover;
+    object-position: 60% center;
+  }
+
+  
+.main-text {
+  left: 5%;
+  top: 52%;
+  transform: none;
+  width: 90%;
+}
+
+.main-text h2 {
+  font-size: 26px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+
+.main-text p {
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  margin-top: 12px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+
+  /* CONCEPT */
+  .concept {
+    padding: 65px 20px;
+  }
+
+  
+.concept h2 {
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+  }
+
+  
+.concept-text {
+  font-family: "Yu Mincho", "游明朝", serif;
+  font-size: 14px;
+  line-height: 2.2;
+  letter-spacing: 0;
+}
+
+  
+
+  /* COLLECTION */
+  .collection {
+    padding: 65px 20px;
+  }
+
+  .product-list {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .product img {
+  width: 85%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+  /* フッター */
+  footer {
+    padding: 45px 15px 25px;
+  }
+
+  footer nav {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
