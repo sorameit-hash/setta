@@ -329,3 +329,22 @@ footer nav a {
     gap: 20px;
   }
 
+
+}
+footer {
+    position: relative;
+}
+
+.footer-qr {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-qr img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    background-color: white;
+  }
