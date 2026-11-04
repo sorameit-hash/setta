@@ -119,18 +119,13 @@ nav a {
 }
 
 .product-list {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  margin: 55px auto 45px;
-  max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+    margin: 55px auto 45px;
+    max-width: 1100px;
 }
-
-.product {
-  flex: 1;
-  min-width: 0;
-}
-
 .product img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -275,7 +270,7 @@ footer nav a {
   margin-bottom: 30px;
 }
 
-  }
+ 
 
   
 .concept-text {
@@ -292,16 +287,36 @@ footer nav a {
     padding: 65px 20px;
   }
 
-  .product-list {
+ .product-list {
     flex-direction: column;
     gap: 45px;
-  }
+}
 
-  .product img {
-  width: 85%;
-  max-width: 280px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
+.product + .product {
+    border-top: 1px solid #d8d5cf;
+    padding-top: 50px;
+}
+
+.product img {
+    width: 85%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.collection .view-more {
+    position: relative;
+}
+
+.collection .view-more::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 1px;
+    background-color: #d8d5cf;
 }
 
   /* フッター */
@@ -313,4 +328,4 @@ footer nav a {
     flex-wrap: wrap;
     gap: 20px;
   }
-}
+
